@@ -2,26 +2,21 @@ import React from "react";
 import propTypes from "prop-types";
 import ReactDOM from "react-dom";
 
-class Contador extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-	render() {
-		return (
-			<React.Fragment>
-				<div className="bigCounter">
-					<div className="calendar">
-						<i className="far fa-clock" />
-					</div>
-					<div className="four">{props.digitFour}</div>
-					<div className="three">{props.digitThree}</div>
-					<div className="two">{props.digitTwo}</div>
-					<div className="one">{props.digitOne}</div>
+const Contador = props => {
+	return (
+		<React.Fragment>
+			<div className="bigCounter">
+				<div className="calendar">
+					<i className="far fa-clock" />
 				</div>
-			</React.Fragment>
-		);
-	}
-}
+				<div className="four">{props.digitFour}</div>
+				<div className="three">{props.digitThree}</div>
+				<div className="two">{props.digitTwo}</div>
+				<div className="one">{props.digitOne}</div>
+			</div>
+		</React.Fragment>
+	);
+};
 
 Contador.propTypes = {
 	digitFour: propTypes.number,
